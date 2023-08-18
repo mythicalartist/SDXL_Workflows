@@ -3,56 +3,6 @@
   "last_link_id": 104,
   "nodes": [
     {
-      "id": 50,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        163.75,
-        66.25
-      ],
-      "size": {
-        "0": 320,
-        "1": 110
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            69
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            59
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            72
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_base_1.0_0.9vae.safetensors"
-      ]
-    },
-    {
       "id": 52,
       "type": "CLIPTextEncodeSDXL",
       "pos": [
@@ -143,7 +93,7 @@
         26
       ],
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -284,7 +234,7 @@
         26
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -319,7 +269,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -394,7 +344,7 @@
         26
       ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -454,7 +404,7 @@
         "1": 210
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "title": "Note - Empty Latent Image",
       "properties": {
@@ -618,7 +568,7 @@
       },
       "widgets_values": [
         "enable",
-        851541353211107,
+        867679961981161,
         "randomize",
         20,
         8,
@@ -641,7 +591,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -751,7 +701,7 @@
       },
       "widgets_values": [
         "enable",
-        829395044627808,
+        1059552216975271,
         "randomize",
         20,
         8,
@@ -769,12 +719,12 @@
         300,
         730
       ],
-      "size": [
-        400,
-        140
-      ],
+      "size": {
+        "0": 400,
+        "1": 140
+      },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -805,12 +755,12 @@
         750,
         730
       ],
-      "size": [
-        350,
-        140
-      ],
+      "size": {
+        "0": 350,
+        "1": 140
+      },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -846,7 +796,7 @@
         26
       ],
       "flags": {},
-      "order": 12,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -870,41 +820,6 @@
       }
     },
     {
-      "id": 75,
-      "type": "Reroute",
-      "pos": [
-        2720,
-        1400
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 86
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "VAE",
-          "links": [
-            77
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      }
-    },
-    {
       "id": 51,
       "type": "CheckpointLoaderSimple",
       "pos": [
@@ -918,7 +833,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -969,7 +884,7 @@
         26
       ],
       "flags": {},
-      "order": 15,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -1005,7 +920,7 @@
         26
       ],
       "flags": {},
-      "order": 14,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1030,53 +945,16 @@
       }
     },
     {
-      "id": 76,
-      "type": "ImpactInt",
-      "pos": [
-        -100,
-        760
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            90,
-            91,
-            92,
-            98,
-            103
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Width",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        1024
-      ]
-    },
-    {
       "id": 69,
       "type": "CLIPTextEncodeSDXLRefiner",
       "pos": [
         1260,
         930
       ],
-      "size": [
-        410,
-        150
-      ],
+      "size": {
+        "0": 410,
+        "1": 150
+      },
       "flags": {},
       "order": 21,
       "mode": 0,
@@ -1159,43 +1037,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 79,
-      "type": "ImpactInt",
-      "pos": [
-        -100,
-        630
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            93,
-            95,
-            97,
-            100,
-            104
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Height",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        1024
-      ]
-    },
-    {
       "id": 80,
       "type": "Reroute",
       "pos": [
@@ -1207,7 +1048,7 @@
         26
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1237,10 +1078,10 @@
         1270,
         1130
       ],
-      "size": [
-        400,
-        130
-      ],
+      "size": {
+        "0": 400,
+        "1": 130
+      },
       "flags": {
         "collapsed": false
       },
@@ -1336,7 +1177,7 @@
         26
       ],
       "flags": {},
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1367,10 +1208,10 @@
         723.75,
         296.25
       ],
-      "size": [
-        400,
-        270
-      ],
+      "size": {
+        "0": 400,
+        "1": 270
+      },
       "flags": {},
       "order": 19,
       "mode": 0,
@@ -1513,10 +1354,10 @@
         1233.75,
         -93.75
       ],
-      "size": [
-        320,
-        110
-      ],
+      "size": {
+        "0": 320,
+        "1": 110
+      },
       "flags": {},
       "order": 18,
       "mode": 0,
@@ -1575,6 +1416,165 @@
         1024,
         1024,
         1
+      ]
+    },
+    {
+      "id": 50,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        163.75,
+        66.25
+      ],
+      "size": {
+        "0": 320,
+        "1": 110
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            69
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            59
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            72
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "dreamshaperXL10_alpha2Xl10.safetensors"
+      ]
+    },
+    {
+      "id": 75,
+      "type": "Reroute",
+      "pos": [
+        2720,
+        1390
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 79,
+      "type": "ImpactInt",
+      "pos": [
+        -100,
+        630
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            93,
+            95,
+            97,
+            100,
+            104
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Height",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        896
+      ]
+    },
+    {
+      "id": 76,
+      "type": "ImpactInt",
+      "pos": [
+        -100,
+        760
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            90,
+            91,
+            92,
+            98,
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        1152
       ]
     }
   ],

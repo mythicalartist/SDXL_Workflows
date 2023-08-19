@@ -1,6 +1,6 @@
 {
-  "last_node_id": 108,
-  "last_link_id": 198,
+  "last_node_id": 110,
+  "last_link_id": 205,
   "nodes": [
     {
       "id": 68,
@@ -27,221 +27,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 56,
-      "type": "Text box",
-      "pos": [
-        300,
-        730
-      ],
-      "size": {
-        "0": 400,
-        "1": 140
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            55,
-            57,
-            58
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Text box"
-      },
-      "widgets_values": [
-        "A, (full body:1.1), photo of a beautiful, woman with, (large breasts:1.4), (intricate (flowing:1.1) dress:1.1), long hair flowing in the wind, standing and smiling shyly, by the seashore, detailed, intricate, realistic, dim light, sunset, intricate, uneven sand, rocks, green grass, footsteps in the sand, orange sky, clouds, ear rings, necklace, (bangles:0.8), photograph dslr, sharp focus"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 54,
-      "type": "Text box",
-      "pos": [
-        750,
-        730
-      ],
-      "size": {
-        "0": 350,
-        "1": 140
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            52,
-            53,
-            75
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Text box"
-      },
-      "widgets_values": [
-        "bad anatomy, extra hands, extra legs, close up shot, bad eyes, small  eyes, bikini, bad hands, black person, signature, painting, extra fingers, bad fingers"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 77,
-      "type": "Reroute",
-      "pos": [
-        200,
-        1180
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 91,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            87
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 78,
-      "type": "Reroute",
-      "pos": [
-        220,
-        970
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 90,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            89
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 80,
-      "type": "Reroute",
-      "pos": [
-        390,
-        990
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 95
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            94
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 81,
-      "type": "Reroute",
-      "pos": [
-        470,
-        1200
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 97,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "INT",
-          "links": [
-            96
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      }
-    },
-    {
       "id": 55,
       "type": "CLIPTextEncodeSDXL",
       "pos": [
@@ -253,7 +38,7 @@
         "1": 270
       },
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -399,7 +184,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 3,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -451,7 +236,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 17,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -518,12 +303,12 @@
         1190,
         290
       ],
-      "size": [
-        400,
-        270
-      ],
+      "size": {
+        "0": 400,
+        "1": 270
+      },
       "flags": {},
-      "order": 18,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -666,7 +451,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 21,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -712,154 +497,6 @@
       }
     },
     {
-      "id": 51,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        750,
-        1340
-      ],
-      "size": {
-        "0": 400,
-        "1": 100
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            181
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            54,
-            74,
-            182
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            183
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_refiner_1.0_0.9vae.safetensors"
-      ]
-    },
-    {
-      "id": 53,
-      "type": "CLIPTextEncodeSDXLRefiner",
-      "pos": [
-        1270,
-        1130
-      ],
-      "size": {
-        "0": 400,
-        "1": 130
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 54
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 55,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 87,
-          "widget": {
-            "name": "width",
-            "config": [
-              "INT",
-              {
-                "default": 1024,
-                "min": 0,
-                "max": 8192
-              }
-            ]
-          },
-          "slot_index": 2
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 96,
-          "widget": {
-            "name": "height",
-            "config": [
-              "INT",
-              {
-                "default": 1024,
-                "min": 0,
-                "max": 8192
-              }
-            ]
-          },
-          "slot_index": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            184
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
-      },
-      "widgets_values": [
-        6,
-        1024,
-        1024,
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 102,
       "type": "LatentUpscaleBy",
       "pos": [
@@ -871,7 +508,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 25,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -906,12 +543,12 @@
         2540,
         440
       ],
-      "size": [
-        320,
-        490
-      ],
+      "size": {
+        "0": 320,
+        "1": 490
+      },
       "flags": {},
-      "order": 27,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1040,7 +677,7 @@
       },
       "widgets_values": [
         true,
-        773476105097156,
+        792139903034021,
         "randomize",
         20,
         8,
@@ -1063,7 +700,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 5,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -1099,7 +736,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -1135,7 +772,7 @@
         "1": 730
       },
       "flags": {},
-      "order": 28,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1160,7 +797,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 26,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1201,7 +838,7 @@
         "1": 760
       },
       "flags": {},
-      "order": 30,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1227,7 +864,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 29,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1264,12 +901,12 @@
         1710,
         310
       ],
-      "size": [
-        320,
-        490
-      ],
+      "size": {
+        "0": 320,
+        "1": 490
+      },
       "flags": {},
-      "order": 23,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1397,7 +1034,7 @@
       },
       "widgets_values": [
         true,
-        924360362728911,
+        169635113262187,
         "randomize",
         20,
         8,
@@ -1420,7 +1057,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 22,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1441,12 +1078,12 @@
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 184
+          "link": 203
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
-          "link": 185
+          "link": 204
         }
       ],
       "outputs": [
@@ -1476,7 +1113,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 7,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -1537,7 +1174,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 8,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -1585,7 +1222,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 24,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1659,7 +1296,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 31,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -1813,7 +1450,7 @@
         256,
         true,
         768,
-        823818183840508,
+        276172795686098,
         "randomize",
         20,
         8,
@@ -1848,7 +1485,7 @@
         "1": 78
       },
       "flags": {},
-      "order": 9,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -1886,7 +1523,7 @@
         "1": 870
       },
       "flags": {},
-      "order": 32,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1901,100 +1538,6 @@
       ]
     },
     {
-      "id": 69,
-      "type": "CLIPTextEncodeSDXLRefiner",
-      "pos": [
-        1260,
-        930
-      ],
-      "size": {
-        "0": 410,
-        "1": 150
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 74
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 75,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 89,
-          "widget": {
-            "name": "width",
-            "config": [
-              "INT",
-              {
-                "default": 1024,
-                "min": 0,
-                "max": 8192
-              }
-            ]
-          },
-          "slot_index": 2
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 94,
-          "widget": {
-            "name": "height",
-            "config": [
-              "INT",
-              {
-                "default": 1024,
-                "min": 0,
-                "max": 8192
-              }
-            ]
-          },
-          "slot_index": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            185
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
-      },
-      "widgets_values": [
-        6,
-        1024,
-        1024,
-        ""
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 76,
       "type": "ImpactInt",
       "pos": [
@@ -2006,7 +1549,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 10,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
@@ -2014,7 +1557,6 @@
           "type": "INT",
           "links": [
             90,
-            91,
             92,
             98,
             103,
@@ -2047,7 +1589,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 11,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -2056,7 +1598,6 @@
           "links": [
             93,
             95,
-            97,
             100,
             104,
             196,
@@ -2075,6 +1616,321 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 56,
+      "type": "Text box",
+      "pos": [
+        300,
+        730
+      ],
+      "size": {
+        "0": 400,
+        "1": 140
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            57,
+            58,
+            199
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "A, (full body:1.1), photo of a beautiful, woman with, (large breasts:1.4), (intricate (flowing:1.1) dress:1.1), long hair flowing in the wind, standing and smiling shyly, by the seashore, detailed, intricate, realistic, dim light, sunset, intricate, uneven sand, rocks, green grass, footsteps in the sand, orange sky, clouds, ear rings, necklace, (bangles:0.8), photograph dslr, sharp focus"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 54,
+      "type": "Text box",
+      "pos": [
+        750,
+        730
+      ],
+      "size": {
+        "0": 350,
+        "1": 140
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            52,
+            53,
+            200
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "bad anatomy, extra hands, extra legs, close up shot, bad eyes, small  eyes, bikini, bad hands, black person, signature, painting, extra fingers, bad fingers"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 78,
+      "type": "Reroute",
+      "pos": [
+        410,
+        950
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 90,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "INT",
+          "links": [
+            202
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 80,
+      "type": "Reroute",
+      "pos": [
+        410,
+        1010
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "INT",
+          "links": [
+            201
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 110,
+      "type": "SeargeSDXLRefinerPromptEncoder",
+      "pos": [
+        1240,
+        920
+      ],
+      "size": [
+        400,
+        240
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "refiner_clip",
+          "type": "CLIP",
+          "link": 205
+        },
+        {
+          "name": "pos_r",
+          "type": "STRING",
+          "link": 199,
+          "widget": {
+            "name": "pos_r",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "POS_R"
+              }
+            ]
+          }
+        },
+        {
+          "name": "neg_r",
+          "type": "STRING",
+          "link": 200,
+          "widget": {
+            "name": "neg_r",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "NEG_R"
+              }
+            ]
+          }
+        },
+        {
+          "name": "refiner_width",
+          "type": "INT",
+          "link": 202,
+          "widget": {
+            "name": "refiner_width",
+            "config": [
+              "INT",
+              {
+                "default": 2048,
+                "min": 0,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "refiner_height",
+          "type": "INT",
+          "link": 201,
+          "widget": {
+            "name": "refiner_height",
+            "config": [
+              "INT",
+              {
+                "default": 2048,
+                "min": 0,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "refiner_positive",
+          "type": "CONDITIONING",
+          "links": [
+            203
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "refiner_negative",
+          "type": "CONDITIONING",
+          "links": [
+            204
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SeargeSDXLRefinerPromptEncoder"
+      },
+      "widgets_values": [
+        "POS_R",
+        "NEG_R",
+        6,
+        2.5,
+        2048,
+        2048
+      ]
+    },
+    {
+      "id": 51,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        700,
+        1260
+      ],
+      "size": {
+        "0": 400,
+        "1": 100
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            182,
+            205
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            183
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_refiner_1.0_0.9vae.safetensors"
+      ]
     }
   ],
   "links": [
@@ -2092,22 +1948,6 @@
       0,
       52,
       2,
-      "STRING"
-    ],
-    [
-      54,
-      51,
-      1,
-      53,
-      0,
-      "CLIP"
-    ],
-    [
-      55,
-      56,
-      0,
-      53,
-      1,
       "STRING"
     ],
     [
@@ -2135,50 +1975,10 @@
       "IMAGE"
     ],
     [
-      74,
-      51,
-      1,
-      69,
-      0,
-      "CLIP"
-    ],
-    [
-      75,
-      54,
-      0,
-      69,
-      1,
-      "STRING"
-    ],
-    [
-      87,
-      77,
-      0,
-      53,
-      2,
-      "INT"
-    ],
-    [
-      89,
-      78,
-      0,
-      69,
-      2,
-      "INT"
-    ],
-    [
       90,
       76,
       0,
       78,
-      0,
-      "*"
-    ],
-    [
-      91,
-      76,
-      0,
-      77,
       0,
       "*"
     ],
@@ -2199,34 +1999,10 @@
       "INT"
     ],
     [
-      94,
-      80,
-      0,
-      69,
-      3,
-      "INT"
-    ],
-    [
       95,
       79,
       0,
       80,
-      0,
-      "*"
-    ],
-    [
-      96,
-      81,
-      0,
-      53,
-      3,
-      "INT"
-    ],
-    [
-      97,
-      79,
-      0,
-      81,
       0,
       "*"
     ],
@@ -2511,22 +2287,6 @@
       "VAE"
     ],
     [
-      184,
-      53,
-      0,
-      107,
-      3,
-      "CONDITIONING"
-    ],
-    [
-      185,
-      69,
-      0,
-      107,
-      4,
-      "CONDITIONING"
-    ],
-    [
       187,
       107,
       0,
@@ -2621,6 +2381,62 @@
       52,
       6,
       "INT"
+    ],
+    [
+      199,
+      56,
+      0,
+      110,
+      1,
+      "STRING"
+    ],
+    [
+      200,
+      54,
+      0,
+      110,
+      2,
+      "STRING"
+    ],
+    [
+      201,
+      80,
+      0,
+      110,
+      4,
+      "INT"
+    ],
+    [
+      202,
+      78,
+      0,
+      110,
+      3,
+      "INT"
+    ],
+    [
+      203,
+      110,
+      0,
+      107,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      204,
+      110,
+      1,
+      107,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      205,
+      51,
+      1,
+      110,
+      0,
+      "CLIP"
     ]
   ],
   "groups": [],

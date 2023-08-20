@@ -1,225 +1,7 @@
 {
-  "last_node_id": 134,
-  "last_link_id": 282,
+  "last_node_id": 148,
+  "last_link_id": 309,
   "nodes": [
-    {
-      "id": 108,
-      "type": "ImpactKSamplerAdvancedBasicPipe",
-      "pos": [
-        2540,
-        440
-      ],
-      "size": {
-        "0": 320,
-        "1": 490
-      },
-      "flags": {},
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "basic_pipe",
-          "type": "BASIC_PIPE",
-          "link": 187
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 188
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 193,
-          "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
-          },
-          "slot_index": 3
-        },
-        {
-          "name": "sampler_name",
-          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
-          "link": 191,
-          "widget": {
-            "name": "sampler_name",
-            "config": [
-              [
-                "euler",
-                "euler_ancestral",
-                "heun",
-                "dpm_2",
-                "dpm_2_ancestral",
-                "lms",
-                "dpm_fast",
-                "dpm_adaptive",
-                "dpmpp_2s_ancestral",
-                "dpmpp_sde",
-                "dpmpp_sde_gpu",
-                "dpmpp_2m",
-                "dpmpp_2m_sde",
-                "dpmpp_2m_sde_gpu",
-                "dpmpp_3m_sde",
-                "dpmpp_3m_sde_gpu",
-                "ddim",
-                "uni_pc",
-                "uni_pc_bh2"
-              ]
-            ]
-          },
-          "slot_index": 4
-        },
-        {
-          "name": "scheduler",
-          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
-          "link": 192,
-          "widget": {
-            "name": "scheduler",
-            "config": [
-              [
-                "normal",
-                "karras",
-                "exponential",
-                "sgm_uniform",
-                "simple",
-                "ddim_uniform"
-              ]
-            ]
-          },
-          "slot_index": 5
-        },
-        {
-          "name": "start_at_step",
-          "type": "INT",
-          "link": 194,
-          "widget": {
-            "name": "start_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 10000
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "BASIC_PIPE",
-          "type": "BASIC_PIPE",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            189
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            190
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactKSamplerAdvancedBasicPipe"
-      },
-      "widgets_values": [
-        true,
-        1106455160230436,
-        "randomize",
-        20,
-        8,
-        "dpmpp_sde_gpu",
-        "karras",
-        0,
-        10000,
-        false
-      ]
-    },
-    {
-      "id": 67,
-      "type": "PreviewImage",
-      "pos": [
-        2420,
-        -360
-      ],
-      "size": {
-        "0": 590,
-        "1": 730
-      },
-      "flags": {},
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 73
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 65,
-      "type": "VAEDecode",
-      "pos": [
-        2120,
-        200
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 29,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 163
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 162
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            73
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
     {
       "id": 107,
       "type": "ToBasicPipe",
@@ -232,7 +14,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 19,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -265,9 +47,7 @@
         {
           "name": "basic_pipe",
           "type": "BASIC_PIPE",
-          "links": [
-            187
-          ],
+          "links": [],
           "shape": 3,
           "slot_index": 0
         }
@@ -386,68 +166,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 88,
-      "type": "UltralyticsDetectorProvider",
-      "pos": [
-        4130,
-        -10
-      ],
-      "size": {
-        "0": 315,
-        "1": 78
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "BBOX_DETECTOR",
-          "type": "BBOX_DETECTOR",
-          "links": [
-            115
-          ],
-          "shape": 3
-        },
-        {
-          "name": "SEGM_DETECTOR",
-          "type": "SEGM_DETECTOR",
-          "links": [],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UltralyticsDetectorProvider"
-      },
-      "widgets_values": [
-        "bbox/face_yolov8m.pt"
-      ]
-    },
-    {
-      "id": 68,
-      "type": "Note",
-      "pos": [
-        260,
-        270
-      ],
-      "size": {
-        "0": 260,
-        "1": 210
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "title": "Note - Empty Latent Image",
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "This node sets the image's resolution in Width and Height.\n\nNOTE: For SDXL, it is recommended to use trained values listed below:\n - 1024 x 1024\n - 1152 x 896\n - 896  x 1152\n - 1216 x 832\n - 832  x 1216\n - 1344 x 768\n - 768  x 1344\n - 1536 x 640\n - 640  x 1536"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 110,
       "type": "SeargeSDXLRefinerPromptEncoder",
       "pos": [
@@ -459,7 +177,7 @@
         "1": 180
       },
       "flags": {},
-      "order": 16,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -578,7 +296,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -629,7 +347,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 23,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -758,7 +476,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -809,7 +527,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -870,344 +588,6 @@
       ]
     },
     {
-      "id": 105,
-      "type": "ImpactKSamplerAdvancedBasicPipe",
-      "pos": [
-        1710,
-        310
-      ],
-      "size": {
-        "0": 320,
-        "1": 490
-      },
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "basic_pipe",
-          "type": "BASIC_PIPE",
-          "link": 157
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 158
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 159,
-          "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
-          },
-          "slot_index": 3
-        },
-        {
-          "name": "end_at_step",
-          "type": "INT",
-          "link": 160,
-          "widget": {
-            "name": "end_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 10000,
-                "min": 0,
-                "max": 10000
-              }
-            ]
-          }
-        },
-        {
-          "name": "sampler_name",
-          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
-          "link": 164,
-          "widget": {
-            "name": "sampler_name",
-            "config": [
-              [
-                "euler",
-                "euler_ancestral",
-                "heun",
-                "dpm_2",
-                "dpm_2_ancestral",
-                "lms",
-                "dpm_fast",
-                "dpm_adaptive",
-                "dpmpp_2s_ancestral",
-                "dpmpp_sde",
-                "dpmpp_sde_gpu",
-                "dpmpp_2m",
-                "dpmpp_2m_sde",
-                "dpmpp_2m_sde_gpu",
-                "dpmpp_3m_sde",
-                "dpmpp_3m_sde_gpu",
-                "ddim",
-                "uni_pc",
-                "uni_pc_bh2"
-              ]
-            ]
-          }
-        },
-        {
-          "name": "scheduler",
-          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
-          "link": 165,
-          "widget": {
-            "name": "scheduler",
-            "config": [
-              [
-                "normal",
-                "karras",
-                "exponential",
-                "sgm_uniform",
-                "simple",
-                "ddim_uniform"
-              ]
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "BASIC_PIPE",
-          "type": "BASIC_PIPE",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            161,
-            163
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            162
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactKSamplerAdvancedBasicPipe"
-      },
-      "widgets_values": [
-        true,
-        1021227172539342,
-        "randomize",
-        20,
-        8,
-        "dpmpp_sde_gpu",
-        "karras",
-        0,
-        10000,
-        false
-      ]
-    },
-    {
-      "id": 63,
-      "type": "ImpactInt",
-      "pos": [
-        1363.75,
-        646.25
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            159,
-            193
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Steps",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        50
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 113,
-      "type": "PreviewImage",
-      "pos": [
-        3060,
-        -350
-      ],
-      "size": {
-        "0": 630,
-        "1": 710
-      },
-      "flags": {},
-      "order": 36,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 223
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 70,
-      "type": "VAEDecode",
-      "pos": [
-        2890,
-        460
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 34,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 189
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 190
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            223,
-            226
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 114,
-      "type": "ImageSharpen",
-      "pos": [
-        3230,
-        420
-      ],
-      "size": {
-        "0": 315,
-        "1": 106
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 226,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            279
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageSharpen"
-      },
-      "widgets_values": [
-        1,
-        0.4,
-        0.3
-      ]
-    },
-    {
-      "id": 102,
-      "type": "LatentUpscaleBy",
-      "pos": [
-        2130,
-        420
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 161
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            188
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LatentUpscaleBy"
-      },
-      "widgets_values": [
-        "nearest-exact",
-        1.5
-      ]
-    },
-    {
       "id": 117,
       "type": "CR Load LoRA",
       "pos": [
@@ -1221,7 +601,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 18,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1284,7 +664,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 7,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -1320,7 +700,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 24,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1359,7 +739,7 @@
         "1": 870
       },
       "flags": {},
-      "order": 40,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1371,193 +751,6 @@
       "properties": {},
       "widgets_values": [
         "ComfyUI"
-      ]
-    },
-    {
-      "id": 112,
-      "type": "SeargeSDXLBasePromptEncoder",
-      "pos": [
-        900,
-        370
-      ],
-      "size": {
-        "0": 390,
-        "1": 290
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "base_clip",
-          "type": "CLIP",
-          "link": 206
-        },
-        {
-          "name": "pos_g",
-          "type": "STRING",
-          "link": 212,
-          "widget": {
-            "name": "pos_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "POS_G"
-              }
-            ]
-          }
-        },
-        {
-          "name": "pos_l",
-          "type": "STRING",
-          "link": 208,
-          "widget": {
-            "name": "pos_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "POS_L"
-              }
-            ]
-          }
-        },
-        {
-          "name": "neg_g",
-          "type": "STRING",
-          "link": 221,
-          "widget": {
-            "name": "neg_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "NEG_G"
-              }
-            ]
-          }
-        },
-        {
-          "name": "neg_l",
-          "type": "STRING",
-          "link": 222,
-          "widget": {
-            "name": "neg_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "NEG_L"
-              }
-            ]
-          }
-        },
-        {
-          "name": "base_width",
-          "type": "INT",
-          "link": 217,
-          "widget": {
-            "name": "base_width",
-            "config": [
-              "INT",
-              {
-                "default": 4096,
-                "min": 0,
-                "max": 8192,
-                "step": 8
-              }
-            ]
-          }
-        },
-        {
-          "name": "base_height",
-          "type": "INT",
-          "link": 215,
-          "widget": {
-            "name": "base_height",
-            "config": [
-              "INT",
-              {
-                "default": 4096,
-                "min": 0,
-                "max": 8192,
-                "step": 8
-              }
-            ]
-          }
-        },
-        {
-          "name": "target_width",
-          "type": "INT",
-          "link": 218,
-          "widget": {
-            "name": "target_width",
-            "config": [
-              "INT",
-              {
-                "default": 4096,
-                "min": 0,
-                "max": 8192,
-                "step": 8
-              }
-            ]
-          }
-        },
-        {
-          "name": "target_height",
-          "type": "INT",
-          "link": 216,
-          "widget": {
-            "name": "target_height",
-            "config": [
-              "INT",
-              {
-                "default": 4096,
-                "min": 0,
-                "max": 8192,
-                "step": 8
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "base_positive",
-          "type": "CONDITIONING",
-          "links": [
-            209
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "base_negative",
-          "type": "CONDITIONING",
-          "links": [
-            210
-          ],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SeargeSDXLBasePromptEncoder"
-      },
-      "widgets_values": [
-        "POS_G",
-        "POS_L",
-        "NEG_G",
-        "NEG_L",
-        4096,
-        4096,
-        0,
-        0,
-        4096,
-        4096
       ]
     },
     {
@@ -1574,7 +767,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1667,156 +860,6 @@
       }
     },
     {
-      "id": 76,
-      "type": "ImpactInt",
-      "pos": [
-        240,
-        630
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            103,
-            217,
-            218,
-            219
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Width",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        1024
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 79,
-      "type": "ImpactInt",
-      "pos": [
-        240,
-        740
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            104,
-            215,
-            216,
-            220
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Height",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        1024
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 56,
-      "type": "Text box",
-      "pos": [
-        240,
-        860
-      ],
-      "size": {
-        "0": 400,
-        "1": 140
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            199,
-            208,
-            212,
-            256
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Text box"
-      },
-      "widgets_values": [
-        "A, (full body:1.1), photo of a beautiful, woman with, (large breasts:1.4), (intricate (flowing:1.1) dress:1.1), long hair flowing in the wind, standing and smiling shyly, by the seashore, detailed, intricate, realistic, dim light, sunset, intricate, uneven sand, rocks, green grass, footsteps in the sand, orange sky, clouds, ear rings, necklace, (bangles:0.8), photograph dslr, sharp focus"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 54,
-      "type": "Text box",
-      "pos": [
-        240,
-        1050
-      ],
-      "size": {
-        "0": 400,
-        "1": 140
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            200,
-            221,
-            222,
-            257
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Text box"
-      },
-      "widgets_values": [
-        "bad anatomy, extra hands, extra legs, bad eyes, small  eyes, bikini, bad hands, black person, signature, painting, extra fingers, bad fingers"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 128,
       "type": "CLIPTextEncode",
       "pos": [
@@ -1830,7 +873,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 25,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1884,7 +927,7 @@
         "1": 520
       },
       "flags": {},
-      "order": 41,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1971,7 +1014,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 33,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -2050,7 +1093,7 @@
         "Node name for S&R": "CR Module Pipe Loader"
       },
       "widgets_values": [
-        55138538058510,
+        849915022023049,
         "randomize"
       ]
     },
@@ -2068,7 +1111,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 26,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -2124,7 +1167,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 21,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -2188,7 +1231,7 @@
         "1": 240
       },
       "flags": {},
-      "order": 12,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -2225,7 +1268,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -2281,7 +1324,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 30,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -2314,54 +1357,18 @@
       }
     },
     {
-      "id": 74,
-      "type": "ImpactInt",
-      "pos": [
-        1363.75,
-        766.25
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            160,
-            194
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Refiner Steps",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        20
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 126,
       "type": "SaveImage",
       "pos": [
         5810,
         450
       ],
-      "size": [
-        870,
-        860
-      ],
+      "size": {
+        "0": 870,
+        "1": 860
+      },
       "flags": {},
-      "order": 43,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -2387,7 +1394,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 39,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2430,13 +1437,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 38,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 279,
+          "link": 309,
           "slot_index": 0
         },
         {
@@ -2585,7 +1592,7 @@
         256,
         true,
         768,
-        44803971901101,
+        770225184248008,
         "randomize",
         20,
         8,
@@ -2620,7 +1627,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 42,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -2663,7 +1670,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 14,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -2701,17 +1708,919 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 68,
+      "type": "Note",
+      "pos": [
+        210,
+        270
+      ],
+      "size": {
+        "0": 260,
+        "1": 210
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "title": "Note - Empty Latent Image",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "This node sets the image's resolution in Width and Height.\n\nNOTE: For SDXL, it is recommended to use trained values listed below:\n - 1024 x 1024\n - 1152 x 896\n - 896  x 1152\n - 1216 x 832\n - 832  x 1216\n - 1344 x 768\n - 768  x 1344\n - 1536 x 640\n - 640  x 1536"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 54,
+      "type": "Text box",
+      "pos": [
+        240,
+        1050
+      ],
+      "size": {
+        "0": 400,
+        "1": 140
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            200,
+            257,
+            283,
+            284
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "close up shot, painting, text, watermark"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 112,
+      "type": "SeargeSDXLBasePromptEncoder",
+      "pos": [
+        900,
+        370
+      ],
+      "size": {
+        "0": 390,
+        "1": 290
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base_clip",
+          "type": "CLIP",
+          "link": 206
+        },
+        {
+          "name": "pos_g",
+          "type": "STRING",
+          "link": 212,
+          "widget": {
+            "name": "pos_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "POS_G"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pos_l",
+          "type": "STRING",
+          "link": 208,
+          "widget": {
+            "name": "pos_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "POS_L"
+              }
+            ]
+          }
+        },
+        {
+          "name": "neg_g",
+          "type": "STRING",
+          "link": 283,
+          "widget": {
+            "name": "neg_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "NEG_G"
+              }
+            ]
+          }
+        },
+        {
+          "name": "neg_l",
+          "type": "STRING",
+          "link": 284,
+          "widget": {
+            "name": "neg_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "NEG_L"
+              }
+            ]
+          }
+        },
+        {
+          "name": "base_width",
+          "type": "INT",
+          "link": 217,
+          "widget": {
+            "name": "base_width",
+            "config": [
+              "INT",
+              {
+                "default": 4096,
+                "min": 0,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "base_height",
+          "type": "INT",
+          "link": 215,
+          "widget": {
+            "name": "base_height",
+            "config": [
+              "INT",
+              {
+                "default": 4096,
+                "min": 0,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "target_width",
+          "type": "INT",
+          "link": 218,
+          "widget": {
+            "name": "target_width",
+            "config": [
+              "INT",
+              {
+                "default": 4096,
+                "min": 0,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        },
+        {
+          "name": "target_height",
+          "type": "INT",
+          "link": 216,
+          "widget": {
+            "name": "target_height",
+            "config": [
+              "INT",
+              {
+                "default": 4096,
+                "min": 0,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "base_positive",
+          "type": "CONDITIONING",
+          "links": [
+            209
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "base_negative",
+          "type": "CONDITIONING",
+          "links": [
+            210
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SeargeSDXLBasePromptEncoder"
+      },
+      "widgets_values": [
+        "POS_G",
+        "POS_L",
+        "NEG_G",
+        "NEG_L",
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096
+      ]
+    },
+    {
+      "id": 63,
+      "type": "ImpactInt",
+      "pos": [
+        1363.75,
+        646.25
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            159,
+            193
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Steps",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        60
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 88,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        4110,
+        -40
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            115
+          ],
+          "shape": 3
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt"
+      ]
+    },
+    {
+      "id": 79,
+      "type": "ImpactInt",
+      "pos": [
+        240,
+        740
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            104,
+            215,
+            216,
+            220
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Height",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        896
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 56,
+      "type": "Text box",
+      "pos": [
+        240,
+        860
+      ],
+      "size": {
+        "0": 400,
+        "1": 140
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            199,
+            208,
+            212,
+            256
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "A, (full body:1.1), photo of a beautiful blonde woman with, (intricate (flowing:1.1) dress:1.1), long hair flowing in the wind, standing and smiling shyly, by the seashore, detailed, intricate, realistic, dim light, sunset, uneven sand, rocks, green grass, footsteps in the sand, orange sky, clouds, ear rings, necklace, (bangles:0.8), photograph dslr, sharp focus"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 76,
+      "type": "ImpactInt",
+      "pos": [
+        240,
+        630
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            103,
+            217,
+            218,
+            219
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        1152
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 113,
+      "type": "PreviewImage",
+      "pos": [
+        3220,
+        -360
+      ],
+      "size": {
+        "0": 630,
+        "1": 710
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 223
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 70,
+      "type": "VAEDecode",
+      "pos": [
+        2980,
+        460
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 189
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 190
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            223,
+            309
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 148,
+      "type": "PreviewImage",
+      "pos": [
+        2380,
+        -350
+      ],
+      "size": [
+        700,
+        690
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 308
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 105,
+      "type": "ImpactKSamplerAdvancedBasicPipe",
+      "pos": [
+        1660,
+        290
+      ],
+      "size": {
+        "0": 320,
+        "1": 490
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "link": 157
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 158
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 159,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 3
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 285,
+          "widget": {
+            "name": "end_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 10000,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 164,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "dpmpp_3m_sde",
+                "dpmpp_3m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
+          "link": 165,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "sgm_uniform",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "links": [
+            304
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            305,
+            306
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            307
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactKSamplerAdvancedBasicPipe"
+      },
+      "widgets_values": [
+        true,
+        244055121009204,
+        "randomize",
+        20,
+        7,
+        "dpmpp_sde_gpu",
+        "karras",
+        0,
+        10000,
+        true
+      ]
+    },
+    {
+      "id": 147,
+      "type": "VAEDecode",
+      "pos": [
+        2090,
+        210
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 306
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 307
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            308
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 108,
+      "type": "ImpactKSamplerAdvancedBasicPipe",
+      "pos": [
+        2490,
+        420
+      ],
+      "size": {
+        "0": 320,
+        "1": 490
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "link": 304
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 305
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 193,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 3
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 191,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "dpmpp_3m_sde",
+                "dpmpp_3m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          },
+          "slot_index": 4
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
+          "link": 192,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "sgm_uniform",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          },
+          "slot_index": 5
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 194,
+          "widget": {
+            "name": "start_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            189
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            190
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactKSamplerAdvancedBasicPipe"
+      },
+      "widgets_values": [
+        true,
+        1023035633435006,
+        "randomize",
+        20,
+        4,
+        "dpmpp_sde_gpu",
+        "karras",
+        0,
+        10000,
+        true
+      ]
+    },
+    {
+      "id": 74,
+      "type": "ImpactInt",
+      "pos": [
+        1370,
+        760
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            194,
+            285
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Refiner Start",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        30
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
-    [
-      73,
-      65,
-      0,
-      67,
-      0,
-      "IMAGE"
-    ],
     [
       103,
       76,
@@ -2801,38 +2710,6 @@
       "INT"
     ],
     [
-      160,
-      74,
-      0,
-      105,
-      3,
-      "INT"
-    ],
-    [
-      161,
-      105,
-      1,
-      102,
-      0,
-      "LATENT"
-    ],
-    [
-      162,
-      105,
-      2,
-      65,
-      1,
-      "VAE"
-    ],
-    [
-      163,
-      105,
-      1,
-      65,
-      0,
-      "LATENT"
-    ],
-    [
       164,
       100,
       0,
@@ -2919,22 +2796,6 @@
       107,
       2,
       "VAE"
-    ],
-    [
-      187,
-      107,
-      0,
-      108,
-      0,
-      "BASIC_PIPE"
-    ],
-    [
-      188,
-      102,
-      0,
-      108,
-      1,
-      "LATENT"
     ],
     [
       189,
@@ -3113,34 +2974,10 @@
       "INT"
     ],
     [
-      221,
-      54,
-      0,
-      112,
-      3,
-      "STRING"
-    ],
-    [
-      222,
-      54,
-      0,
-      112,
-      4,
-      "STRING"
-    ],
-    [
       223,
       70,
       0,
       113,
-      0,
-      "IMAGE"
-    ],
-    [
-      226,
-      70,
-      0,
-      114,
       0,
       "IMAGE"
     ],
@@ -3361,14 +3198,6 @@
       "CONDITIONING"
     ],
     [
-      279,
-      114,
-      0,
-      87,
-      0,
-      "IMAGE"
-    ],
-    [
       280,
       87,
       0,
@@ -3389,6 +3218,78 @@
       125,
       0,
       126,
+      0,
+      "IMAGE"
+    ],
+    [
+      283,
+      54,
+      0,
+      112,
+      3,
+      "STRING"
+    ],
+    [
+      284,
+      54,
+      0,
+      112,
+      4,
+      "STRING"
+    ],
+    [
+      285,
+      74,
+      0,
+      105,
+      3,
+      "INT"
+    ],
+    [
+      304,
+      105,
+      0,
+      108,
+      0,
+      "BASIC_PIPE"
+    ],
+    [
+      305,
+      105,
+      1,
+      108,
+      1,
+      "LATENT"
+    ],
+    [
+      306,
+      105,
+      1,
+      147,
+      0,
+      "LATENT"
+    ],
+    [
+      307,
+      105,
+      2,
+      147,
+      1,
+      "VAE"
+    ],
+    [
+      308,
+      147,
+      0,
+      148,
+      0,
+      "IMAGE"
+    ],
+    [
+      309,
+      70,
+      0,
+      87,
       0,
       "IMAGE"
     ]

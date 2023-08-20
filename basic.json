@@ -1,6 +1,6 @@
 {
-  "last_node_id": 113,
-  "last_link_id": 223,
+  "last_node_id": 114,
+  "last_link_id": 227,
   "nodes": [
     {
       "id": 102,
@@ -183,7 +183,7 @@
       },
       "widgets_values": [
         true,
-        1015549509723270,
+        120343511487757,
         "randomize",
         20,
         8,
@@ -426,197 +426,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 87,
-      "type": "FaceDetailer",
-      "pos": [
-        4090,
-        220
-      ],
-      "size": {
-        "0": 550,
-        "1": 1000
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 127,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 176,
-          "slot_index": 1
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 177
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 178
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 179
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 180
-        },
-        {
-          "name": "bbox_detector",
-          "type": "BBOX_DETECTOR",
-          "link": 115,
-          "slot_index": 6
-        },
-        {
-          "name": "sam_model_opt",
-          "type": "SAM_MODEL",
-          "link": null
-        },
-        {
-          "name": "segm_detector_opt",
-          "type": "SEGM_DETECTOR",
-          "link": null,
-          "slot_index": 8
-        },
-        {
-          "name": "detailer_hook",
-          "type": "DETAILER_HOOK",
-          "link": null,
-          "slot_index": 9
-        },
-        {
-          "name": "sampler_name",
-          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
-          "link": 138,
-          "widget": {
-            "name": "sampler_name",
-            "config": [
-              [
-                "euler",
-                "euler_ancestral",
-                "heun",
-                "dpm_2",
-                "dpm_2_ancestral",
-                "lms",
-                "dpm_fast",
-                "dpm_adaptive",
-                "dpmpp_2s_ancestral",
-                "dpmpp_sde",
-                "dpmpp_sde_gpu",
-                "dpmpp_2m",
-                "dpmpp_2m_sde",
-                "dpmpp_2m_sde_gpu",
-                "dpmpp_3m_sde",
-                "dpmpp_3m_sde_gpu",
-                "ddim",
-                "uni_pc",
-                "uni_pc_bh2"
-              ]
-            ]
-          },
-          "slot_index": 10
-        },
-        {
-          "name": "scheduler",
-          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
-          "link": 141,
-          "widget": {
-            "name": "scheduler",
-            "config": [
-              [
-                "normal",
-                "karras",
-                "exponential",
-                "sgm_uniform",
-                "simple",
-                "ddim_uniform"
-              ]
-            ]
-          },
-          "slot_index": 11
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            125
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "cropped_refined",
-          "type": "IMAGE",
-          "links": [],
-          "shape": 6,
-          "slot_index": 1
-        },
-        {
-          "name": "cropped_enhanced_alpha",
-          "type": "IMAGE",
-          "links": [],
-          "shape": 6,
-          "slot_index": 2
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "detailer_pipe",
-          "type": "DETAILER_PIPE",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FaceDetailer"
-      },
-      "widgets_values": [
-        256,
-        true,
-        768,
-        240212555691746,
-        "randomize",
-        20,
-        8,
-        "dpmpp_sde_gpu",
-        "karras",
-        0.5,
-        5,
-        true,
-        true,
-        0.5,
-        10,
-        3,
-        "center-1",
-        0,
-        0.93,
-        0,
-        0.7,
-        "False",
-        10,
-        "smiling, realistic, natural skin, "
-      ]
-    },
-    {
       "id": 88,
       "type": "UltralyticsDetectorProvider",
       "pos": [
@@ -666,7 +475,7 @@
         "1": 870
       },
       "flags": {},
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1601,7 +1410,7 @@
       },
       "widgets_values": [
         true,
-        106114117186010,
+        405824400216414,
         "randomize",
         20,
         8,
@@ -1685,6 +1494,222 @@
       "bgcolor": "#335"
     },
     {
+      "id": 113,
+      "type": "PreviewImage",
+      "pos": [
+        3060,
+        -350
+      ],
+      "size": {
+        "0": 630,
+        "1": 710
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 223
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 87,
+      "type": "FaceDetailer",
+      "pos": [
+        4090,
+        220
+      ],
+      "size": {
+        "0": 550,
+        "1": 1000
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 227,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 176,
+          "slot_index": 1
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 177
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 178
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 179
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 180
+        },
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 115,
+          "slot_index": 6
+        },
+        {
+          "name": "sam_model_opt",
+          "type": "SAM_MODEL",
+          "link": null
+        },
+        {
+          "name": "segm_detector_opt",
+          "type": "SEGM_DETECTOR",
+          "link": null,
+          "slot_index": 8
+        },
+        {
+          "name": "detailer_hook",
+          "type": "DETAILER_HOOK",
+          "link": null,
+          "slot_index": 9
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,dpmpp_3m_sde,dpmpp_3m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 138,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "dpmpp_3m_sde",
+                "dpmpp_3m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          },
+          "slot_index": 10
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,sgm_uniform,simple,ddim_uniform",
+          "link": 141,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "sgm_uniform",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          },
+          "slot_index": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "cropped_refined",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 6,
+          "slot_index": 1
+        },
+        {
+          "name": "cropped_enhanced_alpha",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 6,
+          "slot_index": 2
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "detailer_pipe",
+          "type": "DETAILER_PIPE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceDetailer"
+      },
+      "widgets_values": [
+        256,
+        true,
+        768,
+        303792030502602,
+        "randomize",
+        20,
+        8,
+        "dpmpp_sde_gpu",
+        "karras",
+        0.5,
+        5,
+        true,
+        true,
+        0.5,
+        10,
+        3,
+        "center-1",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False",
+        10,
+        "smiling, realistic, natural skin, "
+      ]
+    },
+    {
       "id": 70,
       "type": "VAEDecode",
       "pos": [
@@ -1715,8 +1740,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            127,
-            223
+            223,
+            226
           ],
           "shape": 3,
           "slot_index": 0
@@ -1727,29 +1752,48 @@
       }
     },
     {
-      "id": 113,
-      "type": "PreviewImage",
+      "id": 114,
+      "type": "ImageSharpen",
       "pos": [
-        3060,
-        -350
+        3230,
+        420
       ],
-      "size": [
-        630,
-        710
-      ],
-      "flags": {},
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
       "order": 25,
       "mode": 0,
       "inputs": [
         {
-          "name": "images",
+          "name": "image",
           "type": "IMAGE",
-          "link": 223
+          "link": 226,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            227
+          ],
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
+        "Node name for S&R": "ImageSharpen"
+      },
+      "widgets_values": [
+        1,
+        0.4,
+        0.3
+      ]
     }
   ],
   "links": [
@@ -1790,14 +1834,6 @@
       87,
       0,
       92,
-      0,
-      "IMAGE"
-    ],
-    [
-      127,
-      70,
-      0,
-      87,
       0,
       "IMAGE"
     ],
@@ -2198,6 +2234,22 @@
       70,
       0,
       113,
+      0,
+      "IMAGE"
+    ],
+    [
+      226,
+      70,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      227,
+      114,
+      0,
+      87,
       0,
       "IMAGE"
     ]

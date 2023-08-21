@@ -1,0 +1,1158 @@
+{
+  "last_node_id": 134,
+  "last_link_id": 260,
+  "nodes": [
+    {
+      "id": 118,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        2131.215395507813,
+        760.4086268066407
+      ],
+      "size": {
+        "0": 249.25621032714844,
+        "1": 566
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 241,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 231
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 232
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 233,
+          "slot_index": 3
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 234
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 235
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 236,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          },
+          "slot_index": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            237
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        1.3,
+        899397606106642,
+        "fixed",
+        30,
+        1,
+        "dpmpp_2m_sde",
+        "karras",
+        0.3,
+        "Linear",
+        1016,
+        768,
+        22,
+        96,
+        "Half Tile + Intersections",
+        1,
+        64,
+        8,
+        16,
+        "enable"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "PreviewImage",
+      "pos": [
+        2425.4588115863403,
+        669.9477681949667
+      ],
+      "size": {
+        "0": 394.5617370605469,
+        "1": 412.92034912109375
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 237
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 117,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        1760,
+        870
+      ],
+      "size": {
+        "0": 210,
+        "1": 59.406349182128906
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            235
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ]
+    },
+    {
+      "id": 120,
+      "type": "ControlNetLoader",
+      "pos": [
+        1260,
+        430
+      ],
+      "size": {
+        "0": 400,
+        "1": 70
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            239
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11f1e_sd15_tile_fp16.safetensors"
+      ]
+    },
+    {
+      "id": 123,
+      "type": "LoadImage",
+      "pos": [
+        1150,
+        630
+      ],
+      "size": [
+        290,
+        310
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            240,
+            241
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Load alternative image for upscale",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_temp_pvhpa_00001_.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 121,
+      "type": "ControlNetApply",
+      "pos": [
+        1840,
+        570
+      ],
+      "size": {
+        "0": 250,
+        "1": 100
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 238,
+          "slot_index": 0
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 239
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 240,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            232
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApply"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 122,
+      "type": "CR Module Input",
+      "pos": [
+        1490,
+        1120
+      ],
+      "size": {
+        "0": 210,
+        "1": 206
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 250,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            231
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "pos",
+          "type": "CONDITIONING",
+          "links": [
+            238
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "neg",
+          "type": "CONDITIONING",
+          "links": [
+            233
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": [
+            234
+          ],
+          "shape": 3,
+          "slot_index": 5
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": null,
+          "shape": 3,
+          "slot_index": 6
+        },
+        {
+          "name": "controlnet",
+          "type": "CONTROL_NET",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            236
+          ],
+          "shape": 3,
+          "slot_index": 9
+        }
+      ],
+      "title": "Refiner Pipe",
+      "properties": {
+        "Node name for S&R": "CR Module Input"
+      }
+    },
+    {
+      "id": 125,
+      "type": "CR Module Pipe Loader",
+      "pos": [
+        1140,
+        1120
+      ],
+      "size": {
+        "0": 315,
+        "1": 222
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 249
+        },
+        {
+          "name": "pos",
+          "type": "CONDITIONING",
+          "link": 260,
+          "slot_index": 1
+        },
+        {
+          "name": "neg",
+          "type": "CONDITIONING",
+          "link": 257,
+          "slot_index": 2
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 251
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 253,
+          "slot_index": 5
+        },
+        {
+          "name": "controlnet",
+          "type": "CONTROL_NET",
+          "link": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            250
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Pipe Loader",
+      "properties": {
+        "Node name for S&R": "CR Module Pipe Loader"
+      },
+      "widgets_values": [
+        1037863447495416,
+        "randomize"
+      ]
+    },
+    {
+      "id": 129,
+      "type": "VAELoader",
+      "pos": [
+        580,
+        1200
+      ],
+      "size": {
+        "0": 338.3802490234375,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            251
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.safetensors"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 124,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -530,
+        1430
+      ],
+      "size": {
+        "0": 330,
+        "1": 100
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            247
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            248
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Refiner Checkpoint",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "absolutereality_v16.safetensors"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 128,
+      "type": "CR Load LoRA",
+      "pos": [
+        -140,
+        1430
+      ],
+      "size": {
+        "0": 315,
+        "1": 150
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 247,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 248,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            243
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            244
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Lora Add Detail",
+      "properties": {
+        "Node name for S&R": "CR Load LoRA"
+      },
+      "widgets_values": [
+        "On",
+        "add_detail.safetensors",
+        1,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 126,
+      "type": "CR Load LoRA",
+      "pos": [
+        260,
+        1430
+      ],
+      "size": {
+        "0": 315,
+        "1": 150
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 243,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 244,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            249
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            252
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Lora GoodHands",
+      "properties": {
+        "Node name for S&R": "CR Load LoRA"
+      },
+      "widgets_values": [
+        "On",
+        "GoodHands-beta2.safetensors",
+        1,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 133,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1090,
+        1440
+      ],
+      "size": {
+        "0": 235.26693725585938,
+        "1": 95.99998474121094
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 256
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 255,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            257
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "NEG CLIP",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(painting:1.5), (sketch:1.5), (concept art:1.5),\ncross-eyed, (sketches:1.5), \n(worst quality:2), (low quality:2), (normal quality:2), bad quality, medium quality, medium res, polar lowres, lowres,\n\nskin spots, acnes, skin blemishes,\n(tilted head, long neck, poorly drawn face, cross-eyed, \nmissing fingers, (extra fingers, deformed hands, polydactyl:1.5),poorly drawn hands,fused fingers, too many fingers, mutated hands, missing arms,\nbad feet, mutation, deformed, extra hand, extra limbs, extra arms,extra legs, extra foot, malformed limbs, missing legs,\nbad anatomy, bad body, bad proportions, gross proportions), \n\ntext, error, extra digit, fewer digits, cropped, \njpeg artifacts, signature, watermark, username, blurry, cropped,  \n\n"
+      ]
+    },
+    {
+      "id": 131,
+      "type": "PrimitiveNode",
+      "pos": [
+        580,
+        1600
+      ],
+      "size": [
+        510,
+        210
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            255
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "title": "NEG Subject",
+      "properties": {},
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 134,
+      "type": "Text Multiline",
+      "pos": [
+        60,
+        860
+      ],
+      "size": [
+        470,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            258
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "POS SUBJECT",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 130,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        670,
+        1450
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 252
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            253,
+            256,
+            259
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 132,
+      "type": "CLIPTextEncode",
+      "pos": [
+        800,
+        1050
+      ],
+      "size": {
+        "0": 235.26693725585938,
+        "1": 95.99998474121094
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 259
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 258,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            260
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "POS CLIP",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Mystic fantasy. 1 girl flies with 1 dragon gently over water, her thin cloth and infinity long hair flowing in the wind, her feet tipping the water surface. Behind her, her long hair and cloth blends into wings, spreading to infinity. Water splashes, circular waves, light rays shining through hair and cloth.\nMystical fallen kingdom, breathtaking scenery\nThe overall style is mythical fantasy. Sunset, beautiful sky, mesmerizing atmosphere, back light, ((shimmering glow on hair and body contour)), (crystal water),\ndramatic lighting, masterpiece, best quality,\n\n(Detailed face features:1.3),\n(RAW photo, 16k, masterpiece, best quality: 1.2), (ultra realism, hyper detailed and intricate realism: 1.3), (wide depth of field, radiant mapping, ray tracing, god rays: 1.2),"
+      ]
+    }
+  ],
+  "links": [
+    [
+      231,
+      122,
+      1,
+      118,
+      1,
+      "MODEL"
+    ],
+    [
+      232,
+      121,
+      0,
+      118,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      233,
+      122,
+      3,
+      118,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      234,
+      122,
+      5,
+      118,
+      4,
+      "VAE"
+    ],
+    [
+      235,
+      117,
+      0,
+      118,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      236,
+      122,
+      9,
+      118,
+      6,
+      "INT"
+    ],
+    [
+      237,
+      118,
+      0,
+      119,
+      0,
+      "IMAGE"
+    ],
+    [
+      238,
+      122,
+      2,
+      121,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      239,
+      120,
+      0,
+      121,
+      1,
+      "CONTROL_NET"
+    ],
+    [
+      240,
+      123,
+      0,
+      121,
+      2,
+      "IMAGE"
+    ],
+    [
+      241,
+      123,
+      0,
+      118,
+      0,
+      "IMAGE"
+    ],
+    [
+      243,
+      128,
+      0,
+      126,
+      0,
+      "MODEL"
+    ],
+    [
+      244,
+      128,
+      1,
+      126,
+      1,
+      "CLIP"
+    ],
+    [
+      247,
+      124,
+      0,
+      128,
+      0,
+      "MODEL"
+    ],
+    [
+      248,
+      124,
+      1,
+      128,
+      1,
+      "CLIP"
+    ],
+    [
+      249,
+      126,
+      0,
+      125,
+      0,
+      "MODEL"
+    ],
+    [
+      250,
+      125,
+      0,
+      122,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      251,
+      129,
+      0,
+      125,
+      4,
+      "VAE"
+    ],
+    [
+      252,
+      126,
+      1,
+      130,
+      0,
+      "CLIP"
+    ],
+    [
+      253,
+      130,
+      0,
+      125,
+      5,
+      "CLIP"
+    ],
+    [
+      255,
+      131,
+      0,
+      133,
+      1,
+      "STRING"
+    ],
+    [
+      256,
+      130,
+      0,
+      133,
+      0,
+      "CLIP"
+    ],
+    [
+      257,
+      133,
+      0,
+      125,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      258,
+      134,
+      0,
+      132,
+      1,
+      "STRING"
+    ],
+    [
+      259,
+      130,
+      0,
+      132,
+      0,
+      "CLIP"
+    ],
+    [
+      260,
+      132,
+      0,
+      125,
+      1,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

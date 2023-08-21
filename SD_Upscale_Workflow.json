@@ -1,6 +1,6 @@
 {
-  "last_node_id": 134,
-  "last_link_id": 260,
+  "last_node_id": 135,
+  "last_link_id": 266,
   "nodes": [
     {
       "id": 118,
@@ -9,10 +9,10 @@
         2131.215395507813,
         760.4086268066407
       ],
-      "size": {
-        "0": 249.25621032714844,
-        "1": 566
-      },
+      "size": [
+        250,
+        770
+      ],
       "flags": {},
       "order": 15,
       "mode": 0,
@@ -104,31 +104,6 @@
       ]
     },
     {
-      "id": 119,
-      "type": "PreviewImage",
-      "pos": [
-        2425.4588115863403,
-        669.9477681949667
-      ],
-      "size": {
-        "0": 394.5617370605469,
-        "1": 412.92034912109375
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 237
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
       "id": 117,
       "type": "UpscaleModelLoader",
       "pos": [
@@ -163,40 +138,6 @@
       ]
     },
     {
-      "id": 120,
-      "type": "ControlNetLoader",
-      "pos": [
-        1260,
-        430
-      ],
-      "size": {
-        "0": 400,
-        "1": 70
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CONTROL_NET",
-          "type": "CONTROL_NET",
-          "links": [
-            239
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ControlNetLoader"
-      },
-      "widgets_values": [
-        "control_v11f1e_sd15_tile_fp16.safetensors"
-      ]
-    },
-    {
       "id": 123,
       "type": "LoadImage",
       "pos": [
@@ -208,7 +149,7 @@
         310
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -233,7 +174,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "ComfyUI_temp_pvhpa_00001_.jpg",
+        "Girl_Village_Detail_00012_.png",
         "image"
       ]
     },
@@ -488,7 +429,7 @@
         "Node name for S&R": "CR Module Pipe Loader"
       },
       "widgets_values": [
-        1037863447495416,
+        515112826909476,
         "randomize"
       ]
     },
@@ -506,7 +447,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -527,185 +468,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 124,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -530,
-        1430
-      ],
-      "size": {
-        "0": 330,
-        "1": 100
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            247
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            248
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "title": "Refiner Checkpoint",
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "absolutereality_v16.safetensors"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 128,
-      "type": "CR Load LoRA",
-      "pos": [
-        -140,
-        1430
-      ],
-      "size": {
-        "0": 315,
-        "1": 150
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 247,
-          "slot_index": 0
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 248,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            243
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            244
-          ],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "title": "Lora Add Detail",
-      "properties": {
-        "Node name for S&R": "CR Load LoRA"
-      },
-      "widgets_values": [
-        "On",
-        "add_detail.safetensors",
-        1,
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 126,
-      "type": "CR Load LoRA",
-      "pos": [
-        260,
-        1430
-      ],
-      "size": {
-        "0": 315,
-        "1": 150
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 243,
-          "slot_index": 0
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 244,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            249
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            252
-          ],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "title": "Lora GoodHands",
-      "properties": {
-        "Node name for S&R": "CR Load LoRA"
-      },
-      "widgets_values": [
-        "On",
-        "GoodHands-beta2.safetensors",
-        1,
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 133,
@@ -760,7 +522,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "(painting:1.5), (sketch:1.5), (concept art:1.5),\ncross-eyed, (sketches:1.5), \n(worst quality:2), (low quality:2), (normal quality:2), bad quality, medium quality, medium res, polar lowres, lowres,\n\nskin spots, acnes, skin blemishes,\n(tilted head, long neck, poorly drawn face, cross-eyed, \nmissing fingers, (extra fingers, deformed hands, polydactyl:1.5),poorly drawn hands,fused fingers, too many fingers, mutated hands, missing arms,\nbad feet, mutation, deformed, extra hand, extra limbs, extra arms,extra legs, extra foot, malformed limbs, missing legs,\nbad anatomy, bad body, bad proportions, gross proportions), \n\ntext, error, extra digit, fewer digits, cropped, \njpeg artifacts, signature, watermark, username, blurry, cropped,  \n\n"
+        "bad hands"
       ]
     },
     {
@@ -770,14 +532,14 @@
         580,
         1600
       ],
-      "size": [
-        510,
-        210
-      ],
+      "size": {
+        "0": 510,
+        "1": 210
+      },
       "flags": {
         "collapsed": false
       },
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -801,45 +563,10 @@
       "title": "NEG Subject",
       "properties": {},
       "widgets_values": [
-        ""
+        "bad hands"
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 134,
-      "type": "Text Multiline",
-      "pos": [
-        60,
-        860
-      ],
-      "size": [
-        470,
-        200
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            258
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "POS SUBJECT",
-      "properties": {
-        "Node name for S&R": "Text Multiline"
-      },
-      "widgets_values": [
-        ""
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     },
     {
       "id": 130,
@@ -939,6 +666,279 @@
       "widgets_values": [
         "Mystic fantasy. 1 girl flies with 1 dragon gently over water, her thin cloth and infinity long hair flowing in the wind, her feet tipping the water surface. Behind her, her long hair and cloth blends into wings, spreading to infinity. Water splashes, circular waves, light rays shining through hair and cloth.\nMystical fallen kingdom, breathtaking scenery\nThe overall style is mythical fantasy. Sunset, beautiful sky, mesmerizing atmosphere, back light, ((shimmering glow on hair and body contour)), (crystal water),\ndramatic lighting, masterpiece, best quality,\n\n(Detailed face features:1.3),\n(RAW photo, 16k, masterpiece, best quality: 1.2), (ultra realism, hyper detailed and intricate realism: 1.3), (wide depth of field, radiant mapping, ray tracing, god rays: 1.2),"
       ]
+    },
+    {
+      "id": 119,
+      "type": "PreviewImage",
+      "pos": [
+        2425.4588115863403,
+        669.9477681949667
+      ],
+      "size": [
+        640,
+        660
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 237
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 120,
+      "type": "ControlNetLoader",
+      "pos": [
+        1260,
+        430
+      ],
+      "size": {
+        "0": 400,
+        "1": 70
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            239
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11f1e_sd15_tile.pth"
+      ]
+    },
+    {
+      "id": 134,
+      "type": "Text Multiline",
+      "pos": [
+        60,
+        860
+      ],
+      "size": {
+        "0": 470,
+        "1": 200
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            258
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "POS SUBJECT",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "old wrinkled hands of man"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 124,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -530,
+        1430
+      ],
+      "size": {
+        "0": 330,
+        "1": 100
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            263
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            266
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Refiner Checkpoint",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "absolutereality_v181.safetensors"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 135,
+      "type": "CR Load LoRA",
+      "pos": [
+        -140,
+        1430
+      ],
+      "size": {
+        "0": 315,
+        "1": 150
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 263,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 266,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            264
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            265
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Lora GoodHands",
+      "properties": {
+        "Node name for S&R": "CR Load LoRA"
+      },
+      "widgets_values": [
+        "On",
+        "add_detail.safetensors",
+        1,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 126,
+      "type": "CR Load LoRA",
+      "pos": [
+        260,
+        1430
+      ],
+      "size": {
+        "0": 315,
+        "1": 150
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 264,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 265,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            249
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            252
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Lora GoodHands",
+      "properties": {
+        "Node name for S&R": "CR Load LoRA"
+      },
+      "widgets_values": [
+        "On",
+        "GoodHands-beta2.safetensors",
+        1.5,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -1031,38 +1031,6 @@
       "IMAGE"
     ],
     [
-      243,
-      128,
-      0,
-      126,
-      0,
-      "MODEL"
-    ],
-    [
-      244,
-      128,
-      1,
-      126,
-      1,
-      "CLIP"
-    ],
-    [
-      247,
-      124,
-      0,
-      128,
-      0,
-      "MODEL"
-    ],
-    [
-      248,
-      124,
-      1,
-      128,
-      1,
-      "CLIP"
-    ],
-    [
       249,
       126,
       0,
@@ -1149,6 +1117,38 @@
       125,
       1,
       "CONDITIONING"
+    ],
+    [
+      263,
+      124,
+      0,
+      135,
+      0,
+      "MODEL"
+    ],
+    [
+      264,
+      135,
+      0,
+      126,
+      0,
+      "MODEL"
+    ],
+    [
+      265,
+      135,
+      1,
+      126,
+      1,
+      "CLIP"
+    ],
+    [
+      266,
+      124,
+      1,
+      135,
+      1,
+      "CLIP"
     ]
   ],
   "groups": [],

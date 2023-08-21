@@ -14,6 +14,7 @@ ___________________
    2. **Try unexpected prompts**. Sometimes adding something unexpected in the prompt that you were not looking for can also affect the image in a pleasing way. 
    3. **Try different total and refiner steps**. This is especially important in many of the non-converging samplers. Increasing steps may increase detail or may mess up the image. Fine-tuning the steps will depend on the subject, prompt, model and pretty much everything else.
    4. **Try different cfg**. Same as sampler above. Although the cfg in the refiner step is more important than in the initial sampler. In most cases, the initial sampler cfg can be left anywhere around 7, and you can play around with the steps and cfg of the refiner.
+   5. **Try different art styles**.
 4. <span style="color:green">***Don't go crazy on -ve prompts***</span>  
    You can start off without any negative prompts. They constrain the image in many ways. So at the beginning no need to have any constraints. As you see things in your images crop up that you do not want, add them accordingly to your negative prompts. The long list of negative prompts that you see in many of the images are usually not necessary. Only a few of the items in there usually made the images what they are. 
 

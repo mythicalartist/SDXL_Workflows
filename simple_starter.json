@@ -86,7 +86,7 @@
         "1": 180
       },
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -312,12 +312,12 @@
         3050,
         -360
       ],
-      "size": [
-        670,
-        730
-      ],
+      "size": {
+        "0": 670,
+        "1": 730
+      },
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -343,7 +343,7 @@
         "1": 730
       },
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -448,7 +448,7 @@
         "1": 490
       },
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -605,7 +605,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -794,7 +794,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -852,7 +852,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -950,10 +950,10 @@
         1900,
         1180
       ],
-      "size": [
-        220,
-        80
-      ],
+      "size": {
+        "0": 210,
+        "1": 80
+      },
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -1015,7 +1015,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -1078,6 +1078,230 @@
       "bgcolor": "#335"
     },
     {
+      "id": 63,
+      "type": "ImpactInt",
+      "pos": [
+        1363.75,
+        646.25
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            159,
+            193
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Base Model Steps",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        40
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 50,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        260,
+        70
+      ],
+      "size": {
+        "0": 320,
+        "1": 110
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            144
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            145,
+            206
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            146
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Load Checkpoint Model",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "copaxTimelessxlSDXL1_v42.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 115,
+      "type": "Note",
+      "pos": [
+        2040,
+        1320
+      ],
+      "size": {
+        "0": 250,
+        "1": 100
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "title": "Sampler & Scheduler",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "You can experiment with different samplers and schedulers. The defaults are set with values that usually give better results"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 116,
+      "type": "Note",
+      "pos": [
+        -100,
+        910
+      ],
+      "size": {
+        "0": 250,
+        "1": 100
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "title": "Prompts",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Start with simple prompts and go from there. \n\nBuild up over time.\n\nDon't go crazy on -ve prompts."
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 65,
+      "type": "VAEDecode",
+      "pos": [
+        2120,
+        200
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 163
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            73
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 70,
+      "type": "VAEDecode",
+      "pos": [
+        2900,
+        470
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 189
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 190
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            229
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
       "id": 105,
       "type": "ImpactKSamplerAdvancedBasicPipe",
       "pos": [
@@ -1089,7 +1313,7 @@
         "1": 490
       },
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -1226,234 +1450,10 @@
         "karras",
         0,
         10000,
-        false
+        true
       ],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 63,
-      "type": "ImpactInt",
-      "pos": [
-        1363.75,
-        646.25
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            159,
-            193
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Base Model Steps",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        40
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 50,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        260,
-        70
-      ],
-      "size": {
-        "0": 320,
-        "1": 110
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            144
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            145,
-            206
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            146
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "title": "Load Checkpoint Model",
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "copaxTimelessxlSDXL1_v42.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 115,
-      "type": "Note",
-      "pos": [
-        2040,
-        1320
-      ],
-      "size": [
-        250,
-        100
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "title": "Sampler & Scheduler",
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "You can experiment with different samplers and schedulers. The defaults are set with values that usually give better results"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 116,
-      "type": "Note",
-      "pos": [
-        -100,
-        910
-      ],
-      "size": {
-        "0": 250,
-        "1": 100
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "title": "Prompts",
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "Start with simple prompts and go from there. \n\nBuild up over time.\n\nDon't go crazy on -ve prompts."
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 65,
-      "type": "VAEDecode",
-      "pos": [
-        2120,
-        200
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 163
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 162
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            73
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 70,
-      "type": "VAEDecode",
-      "pos": [
-        2900,
-        470
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 189
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 190
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            229
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
     }
   ],
   "links": [
